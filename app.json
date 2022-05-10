@@ -12,18 +12,18 @@
     "success_url": "https://t.me/SlamMirrorSupport",
     "stack": "container",
     "env": {
-      "FINISHED_PROGRESS_STR": {
-        "description": "Single character for finished progress",
-        "value": "●",
+      "AUTHORIZED_CHATS": {
+        "description": "Authorized Chats",
+        "value": "",
         "required": false
       },
-      "UNFINISHED_PROGRESS_STR": {
-        "description": "Single character for unfinished progress",
-        "value": "○",
+      "SUDO_USERS": {
+        "description": "Add Sudo Users",
+        "value": "",
         "required": false
       },
       "CONFIG_FILE_URL": {
-        "description": "Status limit with buttons, Recommend limit status to 4 tasks max.",
+        "description": "gist.github.com",
         "value": "",
         "required": false
       }
