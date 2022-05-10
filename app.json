@@ -27,10 +27,5 @@
         "value": "",
         "required": false
       }
-    },
-    "addons": [
-      {
-        "plan": "heroku-postgresql"
-      }
-   }
+    }
 }
