@@ -44,6 +44,6 @@ COPY extract /usr/local/bin
 COPY pextract /usr/local/bin
 RUN chmod +x /usr/local/bin/extract && chmod +x /usr/local/bin/pextract
 COPY . .
-RUN chmod +x aria.sh
+RUN chmod +x aria.sh && cd /usr/src/app && rm -rf ffmpeg-*-static && rm -rf ffmpeg*.xz
 
 CMD ["bash", "start.sh"]
