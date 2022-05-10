@@ -11,6 +11,7 @@
     "website": "https://github.com/breakdowns/slam-mirrorbot",
     "success_url": "https://t.me/SlamMirrorSupport",
     "stack": "container",
+    "env": {
       "FINISHED_PROGRESS_STR": {
         "description": "Single character for finished progress",
         "value": "●",
