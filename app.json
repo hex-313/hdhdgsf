@@ -31,4 +31,5 @@
       {
         "plan": "heroku-postgresql"
       }
+   }
 }
