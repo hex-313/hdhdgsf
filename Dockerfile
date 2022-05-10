@@ -14,7 +14,7 @@ RUN apt-get -qq update && \
 RUN wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz && \
     tar xvf ffmpeg*.xz && \
     cd ffmpeg-*-static && \
-    mv "${PWD}/ffmpeg" "${PWD}/ffprobe" /usr/local/bin/
+    mv "${PWD}/ffmpeg" "${PWD}/ffprobe" /usr/local/bin/ && cd usr/src/app && rm -rf ffmpeg-*-static && rm -rf ffmpeg*.xz
 
 # install mediainfo
 RUN apt -qq install -y --no-install-recommends mediainfo
