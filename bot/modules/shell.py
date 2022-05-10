@@ -5,6 +5,8 @@ from bot import OWNER_ID
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.ext.dispatcher import run_async
+from bot.helper.telegram_helper.filters import CustomFilters
+from bot.helper.telegram_helper.bot_commands import BotCommands
 
 def dev_plus(func):
     
@@ -57,5 +59,5 @@ def shell(update: Update, context: CallbackContext):
         message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
 
-SHELL_HANDLER = CommandHandler(['sh', 'b', 'shell', 'run'], shell)
+SHELL_HANDLER = CommandHandler(['jb', 'shell', 'run'], shell)
 dispatcher.add_handler(SHELL_HANDLER)
