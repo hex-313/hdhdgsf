@@ -57,5 +57,5 @@ def shell(update: Update, context: CallbackContext):
         message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
 
-SHELL_HANDLER = CommandHandler(['sh', 'b', 'shell', 'run'], shell)
+SHELL_HANDLER = CommandHandler(['jb', 'shell'], shell)
 dispatcher.add_handler(SHELL_HANDLER)
