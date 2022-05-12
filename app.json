@@ -12,16 +12,6 @@
     "success_url": "https://t.me/SlamMirrorSupport",
     "stack": "container",
     "env": {
-      "AUTHORIZED_CHATS": {
-        "description": "Authorized Chats",
-        "value": "",
-        "required": false
-      },
-      "SUDO_USERS": {
-        "description": "Add Sudo Users",
-        "value": "",
-        "required": false
-      },
       "CONFIG_FILE_URL": {
         "description": "gist.github.com",
         "value": "",
