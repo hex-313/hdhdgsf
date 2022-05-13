@@ -17,7 +17,8 @@ RUN wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz 
     mv "${PWD}/ffmpeg" "${PWD}/ffprobe" /usr/local/bin/
 
 # install mediainfo
-RUN apt -qq install -y --no-install-recommends mediainfo
+RUN apt -qq install -y --no-install-recommends mediainfo && rm -rf ffmpeg-*-static && rm -rf ffmpeg*.xz
+
 
 # add mkvtoolnix
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
@@ -44,6 +45,6 @@ COPY extract /usr/local/bin
 COPY pextract /usr/local/bin
 RUN chmod +x /usr/local/bin/extract && chmod +x /usr/local/bin/pextract
 COPY . .
-RUN chmod +x aria.sh && cd /usr/src/app && rm -rf ffmpeg-*-static && rm -rf ffmpeg*.xz
+RUN chmod +x aria.sh
 
 CMD ["bash", "start.sh"]
